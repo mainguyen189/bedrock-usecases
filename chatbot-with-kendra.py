@@ -36,7 +36,7 @@ llm = Bedrock(model_id = "anthropic.claude-instant-v1", model_kwargs = model_kwa
 
 # Set up message history
 mesgs = StreamlitChatMessageHistory(key ='langchain_messages')
-memory = ConversationBufferMemory(chat_memory = mesgs, memory_key = 'history', output_key = 'answer', return_messages = True)
+memory = ConversationBufferMemory(chat_memory = mesgs, memory_key = 'chat_history', output_key = 'answer', return_messages = True)
 if len(mesgs.messages) == 0:
   mesgs.add_ai_message('Do you have any questions about UNO?')
 
