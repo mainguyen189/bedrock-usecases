@@ -54,7 +54,8 @@ Assistant:
 
 #Configure prompt template
 prompt_template = PromptTemplate(
-  input_variables= ['context', 'chat_history', 'question']
+  input_variables= ['context', 'chat_history', 'question'],
+  template = my_template
 )
 
 
